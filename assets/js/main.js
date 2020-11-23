@@ -19,3 +19,15 @@
 // Proviamo prima con pochi numeri, inserire 86 numeri ogni volta potrebbe essere un po’ scocciante :wink:
 // Le validazioni e i controlli possiamo farli anche in un secondo momento.
 // Ricordatevi che se non sappiamo quante volte dobbiamo fare una cosa ci serve.
+
+
+
+
+// SVOGLIMENTO
+
+var numberArray = [];
+while(numberArray.length < 16){
+    var randomNumber = Math.floor(Math.random() * 20) + 1; //sostituisci  20 con 100
+    if(numberArray.indexOf(randomNumber) === -1) numberArray.push(randomNumber);
+}
+console.log(numberArray);
