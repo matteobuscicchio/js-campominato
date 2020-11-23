@@ -25,12 +25,8 @@
 
 // SVOGLIMENTO
 
-// comparazione
-// function numberChecker() {}
-
 // numeri random
 numberArray = [];
-
 while(numberArray.length < 16){
 
     var randomNumber = Math.floor(Math.random() * 100) + 1; //sostituisci  20 con 100
@@ -44,7 +40,7 @@ console.log(randomCpNumber);
 
 // scelta numero utente
 userNumberArray = [];
-while(userNumberArray.length < 20-16) {
+while(userNumberArray.length < 2) {
     
     userNumber = Number(prompt('inserisci un numero'));
 
