@@ -11,7 +11,7 @@
 // con difficoltà 0 => tra 1 e 100
 // con difficoltà 1 =>  tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
-// Consigli del giorno: :party_wizard:
+// Consigli del giorno:
 // Scriviamo prima cosa vogliamo fare passo passo in italiano, dividiamo il lavoro in micro problemi.
 // Ad esempio:
 // Di cosa ho bisogno per generare i numeri?
@@ -25,9 +25,39 @@
 
 // SVOGLIMENTO
 
-var numberArray = [];
+// comparazione
+// function numberChecker() {}
+
+// numeri random
+numberArray = [];
+
 while(numberArray.length < 16){
-    var randomNumber = Math.floor(Math.random() * 20) + 1; //sostituisci  20 con 100
-    if(numberArray.indexOf(randomNumber) === -1) numberArray.push(randomNumber);
+
+    var randomNumber = Math.floor(Math.random() * 100) + 1; //sostituisci  20 con 100
+
+    if (numberArray.indexOf(randomNumber) === -1) {
+        numberArray.push(randomNumber)
+    }
+    randomCpNumber = numberArray.sort();
 }
-console.log(numberArray);
+console.log(randomCpNumber);
+
+// scelta numero utente
+userNumberArray = [];
+while(userNumberArray.length < 20-16) {
+    
+    userNumber = Number(prompt('inserisci un numero'));
+
+    if (userNumber === 0) {
+        alert('il numero zero non è ammesso, scegline uno nuovo')
+    } else if (userNumber > 100) {
+        alert('questo numero non è ammesso, scegline uno nuovo')
+    } else if (userNumberArray.indexOf(userNumber) !== -1) {
+        alert('hai già inserito questo numero, scegline uno nuovo')
+    } else {
+        userNumberArray.push(userNumber);
+    }
+    orderedUserNumber = userNumberArray.sort();
+}
+console.log(orderedUserNumber);
+
