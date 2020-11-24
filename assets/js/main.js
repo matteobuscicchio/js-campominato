@@ -97,7 +97,7 @@ function userLuck() {
         }
     }
     if (userNumberArray.length == difficulty) {
-        alert('Complimenti, hai vinto. Hai dato '+ difficulty + ' risposte esatte consecutivamente. Il tuo puntegio finale è ' + bomb);
+        alert('Complimenti, hai vinto. Hai dato '+ userNumberArray.length + ' risposte esatte consecutivamente. Il tuo puntegio finale è ' + bomb);
     }
 }
 
