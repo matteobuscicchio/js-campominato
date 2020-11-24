@@ -73,7 +73,7 @@ function bombs() {
         }
     }
     oderedCpNumber = numberArray.sort();
-    console.log(oderedCpNumber);
+    // console.log(oderedCpNumber);
     return oderedCpNumber;
 }
 
