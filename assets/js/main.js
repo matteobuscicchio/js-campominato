@@ -24,36 +24,58 @@
 
 
 // SVOGLIMENTO
+// checker
+function checker(numOne, numTwo) {
+    var index = 0;
+    while (index < numOne.length) {
+        if (numTwo === numOne[index]) {
+            return true;
+        }
+        index++;
+    }
+}
 
 // numeri random
-numberArray = [];
-while(numberArray.length < 16){
-
-    var randomNumber = Math.floor(Math.random() * 100) + 1; //sostituisci  20 con 100
-
-    if (numberArray.indexOf(randomNumber) === -1) {
-        numberArray.push(randomNumber)
+function cpRandomNumber() {
+    var numberArray = [];
+    oderedCpNumber = numberArray.sort();
+    while(numberArray.length < 16){
+        var randomNumber = Math.floor(Math.random() * 20) + 1; //sostituisci  20 con 100
+        if (numberArray.indexOf(randomNumber) === -1) {
+            numberArray.push(randomNumber)
+        }
     }
-    randomCpNumber = numberArray.sort();
+    console.log(oderedCpNumber.sort());
+    return oderedCpNumber;
 }
-console.log(randomCpNumber);
 
 // scelta numero utente
-userNumberArray = [];
-while(userNumberArray.length < 2) {
-    
-    userNumber = Number(prompt('inserisci un numero'));
-
-    if (userNumber === 0) {
-        alert('il numero zero non è ammesso, scegline uno nuovo')
-    } else if (userNumber > 100) {
-        alert('questo numero non è ammesso, scegline uno nuovo')
-    } else if (userNumberArray.indexOf(userNumber) !== -1) {
-        alert('hai già inserito questo numero, scegline uno nuovo')
-    } else {
-        userNumberArray.push(userNumber);
+function userLuck() {
+    userNumberArray = [];
+    while(userNumberArray.length < 1) {
+        userNumber = Number(prompt('inserisci un numero'));
+        if (checker(oderedCpNumber, userNumber)) {
+            console.log('spiacente hai perso');
+            break;
+        }
+        // if (checker(userNumberArray, userNumber)) {
+        //     console.log('hai vinto');
+        //     break;
+        // }
+        if (userNumber === 0) {
+            alert('il numero zero non è ammesso, scegline uno nuovo')
+        } else if (userNumber > 100) {
+            alert('questo numero non è ammesso, scegline uno nuovo')
+        } else if (userNumberArray.indexOf(userNumber) !== -1) {
+            alert('hai già inserito questo numero, scegline uno nuovo')
+        } else {
+            userNumberArray.push(userNumber);
+        }
     }
     orderedUserNumber = userNumberArray.sort();
+    console.log(orderedUserNumber);
 }
-console.log(orderedUserNumber);
 
+cpRandomNumber();
+userLuck();
+checker(userNumberArray, userNumber);
