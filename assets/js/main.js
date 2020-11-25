@@ -12,26 +12,26 @@ function checker(numOne, numTwo) {
 var bomb, difficulty;
 var sceltaLivello = Number(prompt('scegli la difficoltà; digita 0 per scegliere facile, 1 per medio e 2 per difficile', '0, 1 ,2'));
 var index=0;
-while (index < 1) {
+var errore=1;
+while (index < errore) {
     if (sceltaLivello == 0) {
         bomb = 100;
         difficulty = 84;
         console.log(difficulty);
-        break;
-    }
-    if (sceltaLivello == 1) {
+        index++;
+    } else if (sceltaLivello == 1) {
         bomb = 80;
         difficulty = 64;
         console.log(difficulty);
-        break;
-    }
-    if (sceltaLivello == 2) {
+        index++;
+    } else if (sceltaLivello == 2) {
         bomb = 50;
         difficulty = 34;
         console.log(difficulty);
-        break;
+        index++;
+    } else {
+        var sceltaLivello = Number(prompt('scegli la difficoltà; digita 0 per scegliere facile, 1 per medio e 2 per difficile', '0, 1 ,2'));
     }
-    index++;
 }
 // numeri random
 function bombs(gameBomb) {
