@@ -17,20 +17,20 @@ while (index < errore) {
     if (sceltaLivello == 0) {
         bomb = 100;
         difficulty = 84;
-        console.log(difficulty);
+        console.log('facile, ci sono ' + difficulty + ' numeri da controllare');
         index++;
     } else if (sceltaLivello == 1) {
         bomb = 80;
         difficulty = 64;
-        console.log(difficulty);
+        console.log('medio, ci sono ' + difficulty + ' numeri da controllare');
         index++;
     } else if (sceltaLivello == 2) {
         bomb = 50;
         difficulty = 34;
-        console.log(difficulty);
+        console.log('difficile, ci sono ' + difficulty + ' numeri da controllare');
         index++;
     } else {
-        var sceltaLivello = Number(prompt('scegli la difficoltà; digita 0 per scegliere facile, 1 per medio e 2 per difficile', '0, 1 ,2'));
+        var sceltaLivello = Number(prompt('valore non ammesso; scegli la difficoltà; digita 0 per scegliere facile, 1 per medio e 2 per difficile', '0, 1 ,2'));
     }
 }
 // numeri random
